@@ -186,6 +186,19 @@ remove(index){
     return removed.value;
 
 }
+reverse(){
+    let node =this.head;
+    this.head=this.tail;
+    this.tail=node;
+    let prev=0;
+    let next;
+    for(let i=0;i<this.length;i++){
+        next=node.next;
+        node.next=prev;
+        prev=node ;
+        node=next
+    }
+}
 }
 let first=new singlylinkedlist();
 first.push("dhanush");
@@ -198,8 +211,8 @@ first.push("amma");
 // console.log(first.get(2));
 // first.set(0,"devanush");4
 // // console.log(first.insert(2,"Devnsh"));
-console.log(first.remove(3));
-
+// console.log(first.remove(3))
+first.reverse();
 // first.insert(2,"Devnsh");
 first.display();
 
