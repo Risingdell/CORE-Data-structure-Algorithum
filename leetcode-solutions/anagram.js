@@ -20,7 +20,7 @@ var isAnagram = function(s, t) {
     }
     for(let i=0;i<s.length;i++){
         let key=s[i];
-        if(!map2[key]){
+        if(map1[key]!==map2[key]){
             return false;
         }
     }
