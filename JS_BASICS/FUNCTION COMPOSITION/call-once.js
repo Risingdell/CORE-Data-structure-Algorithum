@@ -15,6 +15,7 @@ var once = function(fn) {
         while(total===0){
         
             total+=fn(...args);
+            
             console.log(total)
         }return undefined;
         
